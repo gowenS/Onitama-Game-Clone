@@ -76,11 +76,47 @@ public class MoveCard {
                         col = new int[]{-1, 0 , 0 , 0};
                         break;
             case MANTIS:color = RED;
+                        row = new int[]{1 , -1 , 1 , 0};
+                        col = new int[]{-1 , 0 , 1 , 0};
+                        break;
+            case MONKEY:color = BLUE;
+                        row = new int[]{1 , -1 , 1, -1};
+                        col = new int[]{-1 , -1 , 1 , };
+                        break;
+            case OX:    color = BLUE;
+                        row = new int[]{1 , -1 , 0 , 0};
+                        col = new int[]{0 , 0 , 1 , 0};
+                        break;
+            case RABBIT:color = BLUE;
+                        row = new int[]{-1 , 1 , 0 , 0};
+                        col = new int[]{-1 , 1 , 2 , 0};
+                        break;
+            case ROOSTER:   color = RED;
+                            row = new int[]{-1 , 0 , 0 , 1};
+                            col = new int[]{-1 , -1 , 1 , 1};
+                            break;
+            case TIGER: color = BLUE;
+                        row = new int[]{2 , -1 , 0 , 0};
+                        col = new int[]{0 , 0 , 0 , 0};
+                        break;
+
 
 
         }
+
     }
 
+    public int[] getRow() {
+        return row;
+    }
+
+    public int[] getCol() {
+        return col;
+    }
+
+    public int whichColor() {
+        return color;
+    }
 
 
 
