@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -62,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView p2NextView;
     ImageView p2PlayView;
 
+    CheckBox basegame;
+    CheckBox expansion;
+
     Button reset1;
     Button reset2;
 
@@ -83,9 +87,10 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
-        for (int i = 0; i < 16 ; i++) {
-            cardStack.add(new MoveCard(i + 1));
-        }
+        basegame = findViewById(R.id.basegame);
+        basegame.setChecked(true);
+        expansion = findViewById(R.id.senseispath);
+
 
         p1opt1Butt = findViewById(R.id.p1option1);
         p1opt1Butt.setOnClickListener(new View.OnClickListener() {
@@ -128,7 +133,10 @@ public class MainActivity extends AppCompatActivity {
         reset1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                initializeGame();
+                if ( basegame.isChecked() || expansion.isChecked() ) {
+                    initializeGame();
+                }
+
             }
         });
 
@@ -136,7 +144,9 @@ public class MainActivity extends AppCompatActivity {
         reset2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                initializeGame();
+                if ( basegame.isChecked() || expansion.isChecked() ) {
+                    initializeGame();
+                }
             }
         });
 
@@ -459,10 +469,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initializeGame() {
-        Collections.shuffle(cardStack);
+        cardStack.clear();
         moveChosen = false;
         movePlayer = null;
         win = false;
+
+        if (basegame.isChecked()) {
+            if (expansion.isChecked()) {
+                for (int i = 0; i < 32 ; i++) {
+                    cardStack.add(new MoveCard(i + 1));
+                }
+            } else {
+                for (int i = 0; i < 16 ; i++) {
+                    cardStack.add(new MoveCard(i + 1));
+                }
+            }
+        } else {
+            if (expansion.isChecked()) {
+                for (int i = 16; i < 32 ; i++) {
+                    cardStack.add(new MoveCard(i + 1));
+                }
+            }
+        }
+
+        Collections.shuffle(cardStack);
 
 
         for (int i = 0; i < 5 ; i++) {
@@ -565,8 +595,8 @@ public class MainActivity extends AppCompatActivity {
                 giveCards();
                 moveChosen = false;
                 if (win) {
-                    if (playerTurn == 1) gameBoard[row][col].setBackgroundResource(R.drawable.hughmungus2);
-                    if (playerTurn == 2) gameBoard[row][col].setBackgroundResource(R.drawable.hughmungus);
+                    if (playerTurn == 1) gameBoard[row][col].setBackgroundResource(R.drawable.hughmungus);
+                    if (playerTurn == 2) gameBoard[row][col].setBackgroundResource(R.drawable.hughmungus2);
                 }
             }
         }

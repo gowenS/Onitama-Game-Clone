@@ -18,6 +18,7 @@
 		android:rotation="180"
 		android:id="@+id/reset_1"/>
 
+
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -308,13 +309,34 @@
 
 	</LinearLayout>
 
-	<Button
-		android:layout_width="80dp"
-		android:layout_height="50dp"
-		android:layout_gravity="center"
-		android:layout_marginTop="10dp"
-		android:text="RESET"
-		android:id="@+id/reset_2"/>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<CheckBox
+			android:layout_width="120dp"
+			android:layout_height="50dp"
+			android:gravity="center"
+			android:id="@+id/basegame"
+			android:text="Base Game"/>
+
+		<CheckBox
+			android:layout_width="120dp"
+			android:layout_height="50dp"
+			android:gravity="center"
+			android:id="@+id/senseispath"
+			android:text="Sensei's Path"/>
+
+		<Button
+			android:layout_width="80dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:layout_marginLeft="30dp"
+			android:layout_marginTop="10dp"
+			android:text="RESET"
+			android:id="@+id/reset_2"/>
+
+	</LinearLayout>
 
 
 </LinearLayout>
