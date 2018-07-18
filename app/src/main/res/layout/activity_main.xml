@@ -9,6 +9,15 @@
 	android:orientation="vertical"
 	tools:context=".MainActivity">
 
+	<Button
+		android:layout_width="80dp"
+		android:layout_height="50dp"
+		android:layout_gravity="center"
+		android:layout_marginBottom="10dp"
+		android:text="RESET"
+		android:rotation="180"
+		android:id="@+id/reset_1"/>
+
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -16,29 +25,37 @@
 		android:gravity="center"
 		android:paddingBottom="6dp">
 
-		<ImageButton
-			android:layout_width="52dp"
-			android:layout_height="30dp"
+		<ImageView
+			android:layout_width="75dp"
+			android:layout_height="45dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:rotation="180"
 			android:id="@+id/p2nextcard"/>
 
 		<ImageButton
-			android:layout_width="105dp"
-			android:layout_height="60dp"
+			android:layout_width="115dp"
+			android:layout_height="70dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:layout_gravity="center"
 			android:rotation="180"
 			android:id="@+id/p2option2"/>
 
 		<ImageButton
-			android:layout_width="105dp"
-			android:layout_height="60dp"
+			android:layout_width="115dp"
+			android:layout_height="70dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:layout_gravity="center"
 			android:rotation="180"
 			android:id="@+id/p2option1"/>
 
-		<ImageButton
-			android:layout_width="52dp"
-			android:layout_height="30dp"
+		<ImageView
+			android:layout_width="75dp"
+			android:layout_height="45dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:rotation="180"
 			android:id="@+id/p2playcard"/>
 
@@ -258,30 +275,46 @@
 		android:gravity="center"
 		android:paddingTop="6dp">
 
-		<ImageButton
-			android:layout_width="52dp"
-			android:layout_height="30dp"
+		<ImageView
+			android:layout_width="75dp"
+			android:layout_height="45dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:id="@+id/p1playcard"/>
 
 		<ImageButton
-			android:layout_width="105dp"
-			android:layout_height="60dp"
+			android:layout_width="115dp"
+			android:layout_height="70dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:layout_gravity="center"
 			android:id="@+id/p1option1"/>
 
 		<ImageButton
-			android:layout_width="105dp"
-			android:layout_height="60dp"
+			android:layout_width="115dp"
+			android:layout_height="70dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:layout_gravity="center"
 			android:id="@+id/p1option2"/>
 
-		<ImageButton
-			android:layout_width="52dp"
-			android:layout_height="30dp"
+		<ImageView
+			android:layout_width="75dp"
+			android:layout_height="45dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
 			android:id="@+id/p1nextcard"/>
 
 
 	</LinearLayout>
+
+	<Button
+		android:layout_width="80dp"
+		android:layout_height="50dp"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		android:text="RESET"
+		android:id="@+id/reset_2"/>
 
 
 </LinearLayout>
