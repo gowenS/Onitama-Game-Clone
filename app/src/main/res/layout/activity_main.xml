@@ -52,7 +52,7 @@
 			android:rotation="180"
 			android:id="@+id/p2option1"/>
 
-		<ImageView
+		<ImageButton
 			android:layout_width="75dp"
 			android:layout_height="45dp"
 			android:layout_marginLeft="3dp"
@@ -276,7 +276,7 @@
 		android:gravity="center"
 		android:paddingTop="6dp">
 
-		<ImageView
+		<ImageButton
 			android:layout_width="75dp"
 			android:layout_height="45dp"
 			android:layout_marginLeft="3dp"
