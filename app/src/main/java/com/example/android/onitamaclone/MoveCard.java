@@ -218,7 +218,7 @@ public class MoveCard {
                         bginv = R.drawable.ratinv;
                         break;
             case TURTLE:color = RED;
-                        row = new int[]{0 , -1 , 0 , -1};
+                        row = new int[]{0 , -1 , -1 , 0};
                         col = new int[]{-2 , -1 , 1 , 2};
                         bgid = R.drawable.turtle;
                         bginv = R.drawable.turtleinv;

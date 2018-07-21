@@ -691,7 +691,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if (gameBoard[row][col].isSelectable()) {
                 if (gameBoard[row][col].isOccupied && gameBoard[row][col].isMaster()) win = true;
-                if (!gameBoard[row][col].isOccupied && gameBoard[row][col].getIsPlatform() && playerTurn != gameBoard[row][col].whichPlatform) win = true;
+                if (!gameBoard[row][col].isOccupied && gameBoard[row][col].getIsPlatform() && playerTurn != gameBoard[row][col].whichPlatform && gameBoard[movePlayer[0]][movePlayer[1]].isMaster()) win = true;
                 gameBoard[row][col].placePiece(playerTurn,gameBoard[movePlayer[0]][movePlayer[1]].getType());
                 gameBoard[movePlayer[0]][movePlayer[1]].emptyCell();
                 unselectAll();
