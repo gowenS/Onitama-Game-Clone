@@ -1,3 +1,5 @@
+// Created by Sean Gowen. The game rules and art for Onitama are not my property and are the property of Arcane Wonders. This version of this game is not for sale or distribution and is intended solely for personal use.
+
 package com.example.android.onitamaclone;
 
 import android.content.Context;
@@ -19,7 +21,6 @@ public class GridCell extends android.support.v7.widget.AppCompatImageButton {
     public GridCell(Context context) {
         super(context);
     }
-
 
     public GridCell(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -98,7 +99,6 @@ public class GridCell extends android.support.v7.widget.AppCompatImageButton {
     public void makeSelectable() {
         selectable = true;
         updateBG();
-
     }
 
     public boolean isSelectable() { return selectable; }
