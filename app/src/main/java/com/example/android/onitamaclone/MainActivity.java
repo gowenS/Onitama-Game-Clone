@@ -561,126 +561,128 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chooseMove(int button){
-        movePlayer = null;
-        if(playerTurn == 1 && button == 1 ) {
-            if ( p1Play == null ) {
-                unselectAll();
-                p1Play = p1Opt1;
-                p1Opt1 = null;
-                p1PlayView.setBackgroundResource(p1Play.getBG());
-                p1opt1Butt.setBackgroundResource(R.drawable.blank);
-                moveChosen = true;
-            } else {
-                if (p1Opt2 == null) {
+        if( !win ) {
+            movePlayer = null;
+            if(playerTurn == 1 && button == 1 ) {
+                if ( p1Play == null ) {
                     unselectAll();
-                    p1Opt2 = p1Play;
-                    p1opt2Butt.setBackgroundResource(p1Opt2.getBG());
                     p1Play = p1Opt1;
                     p1Opt1 = null;
                     p1PlayView.setBackgroundResource(p1Play.getBG());
                     p1opt1Butt.setBackgroundResource(R.drawable.blank);
                     moveChosen = true;
+                } else {
+                    if (p1Opt2 == null) {
+                        unselectAll();
+                        p1Opt2 = p1Play;
+                        p1opt2Butt.setBackgroundResource(p1Opt2.getBG());
+                        p1Play = p1Opt1;
+                        p1Opt1 = null;
+                        p1PlayView.setBackgroundResource(p1Play.getBG());
+                        p1opt1Butt.setBackgroundResource(R.drawable.blank);
+                        moveChosen = true;
+                    }
                 }
-            }
 
-        }
-        if(playerTurn == 1 && button == 2 ) {
-            if ( p1Play == null ) {
-                unselectAll();
-                p1Play = p1Opt2;
-                p1Opt2 = null;
-                p1PlayView.setBackgroundResource(p1Play.getBG());
-                p1opt2Butt.setBackgroundResource(R.drawable.blank);
-                moveChosen = true;
-            } else {
-                if (p1Opt1 == null) {
+            }
+            if(playerTurn == 1 && button == 2 ) {
+                if ( p1Play == null ) {
                     unselectAll();
-                    p1Opt1 = p1Play;
-                    p1opt1Butt.setBackgroundResource(p1Opt1.getBG());
                     p1Play = p1Opt2;
                     p1Opt2 = null;
                     p1PlayView.setBackgroundResource(p1Play.getBG());
                     p1opt2Butt.setBackgroundResource(R.drawable.blank);
                     moveChosen = true;
+                } else {
+                    if (p1Opt1 == null) {
+                        unselectAll();
+                        p1Opt1 = p1Play;
+                        p1opt1Butt.setBackgroundResource(p1Opt1.getBG());
+                        p1Play = p1Opt2;
+                        p1Opt2 = null;
+                        p1PlayView.setBackgroundResource(p1Play.getBG());
+                        p1opt2Butt.setBackgroundResource(R.drawable.blank);
+                        moveChosen = true;
 
+                    }
                 }
-            }
 
-        }
-        if(playerTurn == 2 && button == 3 ) {
-            if ( p2Play == null ) {
-                unselectAll();
-                p2Play = p2Opt1;
-                p2Opt1 = null;
-                p2PlayView.setBackgroundResource(p2Play.getBG());
-                p2opt1Butt.setBackgroundResource(R.drawable.blank);
-                moveChosen = true;
-            } else {
-                if (p2Opt2 == null) {
+            }
+            if(playerTurn == 2 && button == 3 ) {
+                if ( p2Play == null ) {
                     unselectAll();
-                    p2Opt2 = p2Play;
-                    p2opt2Butt.setBackgroundResource(p2Opt2.getBG());
                     p2Play = p2Opt1;
                     p2Opt1 = null;
                     p2PlayView.setBackgroundResource(p2Play.getBG());
                     p2opt1Butt.setBackgroundResource(R.drawable.blank);
                     moveChosen = true;
+                } else {
+                    if (p2Opt2 == null) {
+                        unselectAll();
+                        p2Opt2 = p2Play;
+                        p2opt2Butt.setBackgroundResource(p2Opt2.getBG());
+                        p2Play = p2Opt1;
+                        p2Opt1 = null;
+                        p2PlayView.setBackgroundResource(p2Play.getBG());
+                        p2opt1Butt.setBackgroundResource(R.drawable.blank);
+                        moveChosen = true;
+                    }
                 }
             }
-        }
-        if(playerTurn == 2 && button == 4 ) {
-            if ( p2Play == null ) {
-                unselectAll();
-                p2Play = p2Opt2;
-                p2Opt2 = null;
-                p2PlayView.setBackgroundResource(p2Play.getBG());
-                p2opt2Butt.setBackgroundResource(R.drawable.blank);
-                moveChosen = true;
-            } else {
-                if (p2Opt1 == null) {
+            if(playerTurn == 2 && button == 4 ) {
+                if ( p2Play == null ) {
                     unselectAll();
-                    p2Opt1 = p2Play;
-                    p2opt1Butt.setBackgroundResource(p2Opt1.getBG());
                     p2Play = p2Opt2;
                     p2Opt2 = null;
                     p2PlayView.setBackgroundResource(p2Play.getBG());
                     p2opt2Butt.setBackgroundResource(R.drawable.blank);
                     moveChosen = true;
+                } else {
+                    if (p2Opt1 == null) {
+                        unselectAll();
+                        p2Opt1 = p2Play;
+                        p2opt1Butt.setBackgroundResource(p2Opt1.getBG());
+                        p2Play = p2Opt2;
+                        p2Opt2 = null;
+                        p2PlayView.setBackgroundResource(p2Play.getBG());
+                        p2opt2Butt.setBackgroundResource(R.drawable.blank);
+                        moveChosen = true;
 
+                    }
                 }
             }
-        }
 
-        if (playerTurn == 1 && button == 5 && p1Play != null) {
-            unselectAll();
-            if (p1Opt1 == null) {
-                p1Opt1 = p1Play;
-                p1Play = null;
-                p1PlayView.setBackgroundResource(R.drawable.redcard);
-                p1opt1Butt.setBackgroundResource(p1Opt1.getBG());
-            } else{
-                p1Opt2 = p1Play;
-                p1Play = null;
-                p1PlayView.setBackgroundResource(R.drawable.redcard);
-                p1opt2Butt.setBackgroundResource(p1Opt2.getBG());
+            if (playerTurn == 1 && button == 5 && p1Play != null) {
+                unselectAll();
+                if (p1Opt1 == null) {
+                    p1Opt1 = p1Play;
+                    p1Play = null;
+                    p1PlayView.setBackgroundResource(R.drawable.redcard);
+                    p1opt1Butt.setBackgroundResource(p1Opt1.getBG());
+                } else{
+                    p1Opt2 = p1Play;
+                    p1Play = null;
+                    p1PlayView.setBackgroundResource(R.drawable.redcard);
+                    p1opt2Butt.setBackgroundResource(p1Opt2.getBG());
+                }
+                moveChosen = false;
             }
-            moveChosen = false;
-        }
 
-        if (playerTurn == 2 && button == 6 && p2Play != null) {
-            unselectAll();
-            if (p2Opt1 == null) {
-                p2Opt1 = p2Play;
-                p2Play = null;
-                p2PlayView.setBackgroundResource(R.drawable.bluecard);
-                p2opt1Butt.setBackgroundResource(p2Opt1.getBG());
-            } else{
-                p2Opt2 = p2Play;
-                p2Play = null;
-                p2PlayView.setBackgroundResource(R.drawable.bluecard);
-                p2opt2Butt.setBackgroundResource(p2Opt2.getBG());
+            if (playerTurn == 2 && button == 6 && p2Play != null) {
+                unselectAll();
+                if (p2Opt1 == null) {
+                    p2Opt1 = p2Play;
+                    p2Play = null;
+                    p2PlayView.setBackgroundResource(R.drawable.bluecard);
+                    p2opt1Butt.setBackgroundResource(p2Opt1.getBG());
+                } else{
+                    p2Opt2 = p2Play;
+                    p2Play = null;
+                    p2PlayView.setBackgroundResource(R.drawable.bluecard);
+                    p2opt2Butt.setBackgroundResource(p2Opt2.getBG());
+                }
+                moveChosen = false;
             }
-            moveChosen = false;
         }
     }
 
@@ -700,8 +702,39 @@ public class MainActivity extends AppCompatActivity {
                 giveCards();
                 moveChosen = false;
                 if (win) {
-                    if (playerTurn == 1) gameBoard[row][col].setBackgroundResource(R.drawable.hughmungus);
-                    if (playerTurn == 2) gameBoard[row][col].setBackgroundResource(R.drawable.hughmungus2);
+                    if (playerTurn == 1) {
+                        for ( int v = 0; v < 5; v++){
+                            for( int m = 0; m < 5; m++){
+                                if(gameBoard[v][m].getP1P2() == 1 ) gameBoard[v][m].emptyCell();
+                            }
+                        }
+                    }
+                    if (playerTurn == 2) {
+                        for ( int v = 0; v < 5; v++){
+                            for( int m = 0; m < 5; m++){
+                                if(gameBoard[v][m].getP1P2() == 2 ) gameBoard[v][m].emptyCell();
+                            }
+                        }
+                    }
+                    p1Opt1 = null;
+                    p1Opt2 = null;
+                    p2Opt1 = null;
+                    p2Opt2 = null;
+                    p1Next = null;
+                    p2Next = null;
+                    p1Play = null;
+                    p2Play = null;
+
+                    p1opt1Butt.setBackgroundResource(R.drawable.blank);
+                    p1opt2Butt.setBackgroundResource(R.drawable.blank);
+                    p2opt1Butt.setBackgroundResource(R.drawable.blank);
+                    p2opt2Butt.setBackgroundResource(R.drawable.blank);
+
+                    p1PlayView.setBackgroundResource(R.drawable.redcard);
+                    p2PlayView.setBackgroundResource(R.drawable.bluecard);
+                    p1NextView.setBackgroundResource(R.drawable.blank);
+                    p2NextView.setBackgroundResource(R.drawable.blank);
+
                 }
             }
         }
